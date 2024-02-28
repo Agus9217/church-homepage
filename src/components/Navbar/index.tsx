@@ -11,15 +11,15 @@ export const Navbar = () => {
   return (
     <Box as="header">
       <Flex
-        borderWidth={"2px"}
-        borderColor={"teal"}
         minH={"50px"}
         alignItems={"center"}
         justifyContent={"space-between"}
         px={4}
       >
         <Flex>
-          <Text>Logo</Text>
+          <Text as={"h1"} pr={1} fontSize={"xl"} fontWeight={"black"}>
+            Iglesia Cristiana en <Box as={"span"} color={'blueChurch'} >Barrio Nuevo</Box>
+          </Text>
         </Flex>
         <DesktopNav display={display} />
         <MobileNav display={display} />
