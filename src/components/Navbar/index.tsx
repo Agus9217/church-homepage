@@ -1,29 +1,30 @@
-import { Box, Flex, Text, useBreakpointValue } from "@chakra-ui/react";
-import { DesktopNav } from "./DesktopNav";
-import { MobileNav } from "./MobileNav";
+import { Box, Stack, Text } from "@chakra-ui/react"
 
 export const Navbar = () => {
-  const display = useBreakpointValue({
-    base: "flex",
-    md: "none",
-  });
-
   return (
-    <Box as="header">
-      <Flex
-        minH={"50px"}
-        alignItems={"center"}
-        justifyContent={"space-between"}
-        px={4}
-      >
-        <Flex>
-          <Text as={"h1"} pr={1} fontSize={"xl"} fontWeight={"black"}>
-            Iglesia Cristiana en <Box as={"span"} color={'blueChurch'} >Barrio Nuevo</Box>
+    <Stack
+      as="header"
+      width="100%"
+      minH="70%"
+      px={{ base: "2", md: "4" }}
+      justifyContent="center"
+      borderWidth="1px"
+      borderColor="cyan"
+      py="1"
+    >
+      <Stack>
+        <Box
+          maxW={{ base: "140px", md: "300px" }}
+        >
+          <Text
+            as="h1"
+            fontWeight="bold"
+          >
+            Iglesia Cristiana en <Box as="span" color="blueChurch">Barrio Nuevo</Box>
           </Text>
-        </Flex>
-        <DesktopNav display={display} />
-        <MobileNav display={display} />
-      </Flex>
-    </Box>
-  );
-};
+        </Box>
+      </Stack>
+
+    </Stack>
+  )
+}

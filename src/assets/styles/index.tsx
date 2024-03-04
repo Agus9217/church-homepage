@@ -1,4 +1,3 @@
-// Supports weights 100-900
 import "@fontsource-variable/inter";
 import { extendTheme } from "@chakra-ui/react";
 
