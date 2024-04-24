@@ -2,12 +2,17 @@ import { Button, Flex, ListItem, Stack, Text, UnorderedList } from "@chakra-ui/r
 import { NAV_ITEM } from "../NavItem"
 import { IoMdContact } from "react-icons/io"
 
-export const DesktopNavbar = () => {
+interface Prop {
+  displayDimension: string | undefined
+}
+
+export const DesktopNavbar = ({ displayDimension }: Prop) => {
   return (
     <Stack
       direction={'row'}
       alignItems={'center'}
       width={'100%'}
+      display={displayDimension === 'none' ? 'none' : 'flex'}
     >
       <Flex
         flexGrow={1}
