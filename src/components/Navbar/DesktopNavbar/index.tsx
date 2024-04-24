@@ -1,6 +1,7 @@
-import { Button, Flex, ListItem, Stack, Text, UnorderedList } from "@chakra-ui/react"
+import { Button, Flex, ListItem, Menu, MenuButton, MenuItem, MenuList, Stack, Text, UnorderedList } from "@chakra-ui/react"
 import { NAV_ITEM } from "../NavItem"
 import { IoMdContact } from "react-icons/io"
+import { ChevronDownIcon } from "@chakra-ui/icons"
 
 interface Prop {
   displayDimension: string | undefined
@@ -8,7 +9,7 @@ interface Prop {
 
 export const DesktopNavbar = ({ displayDimension }: Prop) => {
   return (
-    <Stack
+    <Flex
       direction={'row'}
       alignItems={'center'}
       width={'100%'}
@@ -60,8 +61,9 @@ export const DesktopNavbar = ({ displayDimension }: Prop) => {
           Sign Up
         </Button>
       </Flex>
+      
 
-    </Stack>
+    </Flex>
 
   )
 }

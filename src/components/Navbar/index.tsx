@@ -1,5 +1,6 @@
-import { Flex, useBreakpointValue } from "@chakra-ui/react"
+import { Flex, Stack, useBreakpointValue } from "@chakra-ui/react"
 import { DesktopNavbar } from "./DesktopNavbar"
+import { MobileNavbar } from "./MobileNavbar"
 
 export const Navbar = () => {
 
@@ -9,7 +10,7 @@ export const Navbar = () => {
   })
 
   return (
-    <Flex
+    <Stack
       as="header"
       borderWidth={'1px'}
       borderColor={'red'}
@@ -17,7 +18,8 @@ export const Navbar = () => {
       width={'100%'}
     >
       <DesktopNavbar displayDimension={variantDisplay} />
-    </Flex>
+      <MobileNavbar displayDimension={variantDisplay} />
+    </Stack>
   )
 }
 
